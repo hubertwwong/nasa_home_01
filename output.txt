@@ -1,0 +1,20 @@
+F.
+
+Failures:
+
+  1) Station basic db write something
+     Failure/Error: assert_equal 2, Station.all.count
+     MiniTest::Assertion:
+       <2> expected but was
+       <1>.
+     # ./spec/models/station_spec.rb:11:in `block (3 levels) in <top (required)>'
+
+Finished in 0.82589 seconds
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/station_spec.rb:6 # Station basic db write something
+
+Randomized with seed 48197
+
