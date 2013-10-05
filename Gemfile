@@ -43,3 +43,92 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# MY STUFF
+##############################################################################
+# some RVM installs don't have have readline support.
+# so install it just in case.
+gem 'rb-readline'
+
+# ubuntu / linux stuff.
+gem 'therubyracer'
+gem 'execjs'
+
+# for testing.
+group :test, :developoment do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'cucumber-rails', require: false
+  # replacement for YAML files for test.  
+  gem 'factory_girl_rails'
+  # cleans the db after ever test.
+  gem 'database_cleaner'
+  
+  # automation run when rspec changes.
+  gem 'guard-rspec'
+  # launch browser with the line save_and_launch
+  gem 'launchy'
+  
+  # this might be broken. for 2.0
+  # gem 'debugger'
+  # use byebug for ruby 2.0
+  gem 'byebug'
+end
+
+# for user authentication
+gem 'bcrypt-ruby'
+
+# stuff to run after
+#
+# RSPEC
+# ===============================================================
+#
+# >> run
+# rails generate rspec:install
+#
+# >> load this into config/application.rb
+# for spec generators. 
+#
+# rspec generator
+# config.generators do |g|
+#   g.test_framework :rspec
+# end
+#
+#
+#
+# CAPYBARA
+# ===============================================================
+#
+# load this into spec_helper.rb for spec to use with rspec.
+# require 'capybara/rspec'
+# 
+# 
+#
+# CUCUMBER
+# ===============================================================
+#
+# >> install
+# rails g cucumber:install
+#
+#
+# 
+# FACTORY GIRL
+# ===============================================================
+#
+# >> load this into spec_helper.rb
+#
+# Factory girl config for RSpec
+# RSpec.configure do |config|
+#  config.include FactoryGirl::Syntax::Methods
+# end
+#
+#
+#
+# GUARD
+# ===============================================================
+# 
+# >> install
+# guard init rspec
+# 
+#  
+#
