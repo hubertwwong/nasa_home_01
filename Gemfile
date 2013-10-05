@@ -51,7 +51,7 @@ end
 gem 'rb-readline'
 
 # for the second db.
-gem 'mysql'
+gem 'mysql2'
 
 # ubuntu / linux stuff.
 gem 'therubyracer'
