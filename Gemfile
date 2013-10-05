@@ -50,6 +50,9 @@ end
 # so install it just in case.
 gem 'rb-readline'
 
+# for the second db.
+gem 'mysql'
+
 # ubuntu / linux stuff.
 gem 'therubyracer'
 gem 'execjs'
