@@ -23,3 +23,28 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+
+# EXTERNAL DB.
+##############################################################################
+# testing a multiple db setup.
+
+nasa_space_development:
+  adapter: mysql
+  database: nasa_space_development
+  user: root
+  password: password
+  host: localhost
+
+nasa_space_test:
+  adapter: mysql
+  database: nasa_space_test
+  user: root
+  password: password
+  host: localhost
+  
+nasa_space_production:
+  adapter: mysql
+  database: nasa_space_production
+  user: root
+  password: password
+  host: localhost
