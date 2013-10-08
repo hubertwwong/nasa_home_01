@@ -45,5 +45,8 @@ RSpec.configure do |config|
   RSpec.configure do |config|
    config.include FactoryGirl::Syntax::Methods
   end
+  
+  # find the factories directory
+  FactoryGirl.find_definitions
 
 end

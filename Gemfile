@@ -125,7 +125,12 @@ gem 'bcrypt-ruby'
 #  config.include FactoryGirl::Syntax::Methods
 # end
 #
-#
+# >> getting started page
+# https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md
+# 
+# >> load this too into spec_helper.rb
+# find the factories directory
+# FactoryGirl.find_definitions
 #
 # GUARD
 # ===============================================================
