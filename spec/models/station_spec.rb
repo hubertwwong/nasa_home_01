@@ -9,12 +9,16 @@ describe Station do
       station_one.description = "russian space station"
       station_one.save
       
-      Station.all.count.should be > 1
+      Station.all.count.should > 1
     end
     
+    # assumes a row is in the test db.
+    # with these values.
+    # name: station1
+    # description: station description
     it "read station1" do
-      station_one = Station.find_by first_name: 'station1'
-      station_one.description.should be 'station 2 description'
+      station_one = Station.find_by name: 'station1'
+      station_one.description.should == 'station 1 description'
     end
   end
   

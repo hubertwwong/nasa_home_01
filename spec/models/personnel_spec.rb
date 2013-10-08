@@ -8,4 +8,15 @@ describe Personnel do
     end
   end
   
+  describe "basic db test" do
+    before(:each) do
+      # Returns a saved User instance
+      @personnel1 = FactoryGirl.create(:personnel)
+    end
+  
+    it "should have 1 user" do
+      Personnel.all.size.should == 1
+    end
+  end
+  
 end
