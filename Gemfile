@@ -63,7 +63,7 @@ group :test, :developoment do
   gem 'capybara'
   gem 'cucumber-rails', require: false
   # replacement for YAML files for test.  
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', require: false
   # cleans the db after ever test.
   gem 'database_cleaner'
   
@@ -82,6 +82,19 @@ end
 gem 'bcrypt-ruby'
 
 # stuff to run after
+#
+# NOTES
+# ===============================================================
+#
+# >> require: false
+# this is needed for gems that are loaded elsewhere.
+# usually in the spec helper file.
+# basically you are loading it there instead of here.
+# 
+# this explains the issue.
+# http://stackoverflow.com/questions/9300231/factory-already-registered-user-factorygirlduplicatedefinitionerror 
+#
+#
 #
 # RSPEC
 # ===============================================================
@@ -120,6 +133,10 @@ gem 'bcrypt-ruby'
 #
 # >> load this into spec_helper.rb
 #
+# require 'factory_girl_rails'
+#
+# >> load this into spec_helper.rb - part 2.
+#
 # Factory girl config for RSpec
 # RSpec.configure do |config|
 #  config.include FactoryGirl::Syntax::Methods
@@ -127,11 +144,9 @@ gem 'bcrypt-ruby'
 #
 # >> getting started page
 # https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md
-# 
-# >> load this too into spec_helper.rb
-# find the factories directory
-# FactoryGirl.find_definitions
 #
+#
+# 
 # GUARD
 # ===============================================================
 # 
