@@ -48,6 +48,16 @@ RSpec.configure do |config|
    config.include FactoryGirl::Syntax::Methods
   end
   
+  # generators.
+  # so if you do rails g model foo
+  # if will generate spec files.
+  config.generators do |g|
+    g.template_engine :erb
+    g.test_framework  :rspec, :fixture => true, :views => false
+    g.integration_tool :rspec, :fixture => true, :views => true
+    g.fixture_replacement :factory_girl, :dir => "spec/support/factories" 
+  end
+  
   # database cleaner strategy. default one on the page
   #config.before(:suite) do
   #  DatabaseCleaner.strategy = :transaction
