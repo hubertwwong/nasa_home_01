@@ -32,7 +32,7 @@ nasa_space_development:
   encoding: utf8
   reconnect: false
   database: nasa_space_development
-  pool: 5
+  pool: 100
   username: root
   password: password
 
@@ -41,7 +41,7 @@ nasa_space_test:
   encoding: utf8
   reconnect: false
   database: nasa_space_test
-  pool: 5
+  pool: 100
   username: root
   password: password
   
@@ -50,7 +50,7 @@ nasa_space_production:
   encoding: utf8
   reconnect: false
   database: nasa_space_production
-  pool: 5
+  pool: 100
   username: root
   password: password
   

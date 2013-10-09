@@ -151,7 +151,41 @@ gem 'bcrypt-ruby'
 # ===============================================================
 # 
 # >> install
-# guard init rspec
+# bundle exec guard init rspec
 # 
-#  
+# >> notes
+# there might be an issue of guard needing .5.0 and above for
+# ruby 2.0
+#
+#
+# 
+# DATABASE CLEANER
+# ===============================================================
+#
+# >> url
+# https://github.com/bmabey/database_cleaner
+# 
+# >> load the lib in the spec_helper
+# require 'database_cleaner'
+# 
+# >> set the database clean strategy
+# note that you only need to add this in if you are not using cucumber rails. 
+# that gem adds it to you.
+#
+# database cleaner strategy. default one on the page
+# config.before(:suite) do
+#   DatabaseCleaner.strategy = :transaction
+#   DatabaseCleaner.clean_with(:truncation)
+# end
+#
+# config.before(:each) do
+#   DatabaseCleaner.start
+# end
+#
+# config.after(:each) do
+#   DatabaseCleaner.clean
+# end
+#
+#
+#
 #
